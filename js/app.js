@@ -14,3 +14,9 @@ function getsum(array){
   }, 0);
 }
 
+function randomNum(min,max){
+  return Math.floor(Math.random() * (max-min+1)+min);
+}
+
+console.log(randomNum(california.minCust,california.maxCust));
+
