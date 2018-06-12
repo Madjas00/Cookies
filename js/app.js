@@ -3,20 +3,88 @@
 var california = {
   minCust: 15,
   maxCust: 40,
-  salesHourly: [3,6,8,4,10,12,10,15,13,15,20,10,13,7,5],
-  saleTotal: 151,
+  salesHourly: [],
   saleAvg: 10.06,
-}
 
-function getsum(array){
-  return array.reduce(function(sum, value) {
-    return sum + value;
-  }, 0);
-}
+  randomNum: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
 
-function randomNum(min,max){
-  return Math.floor(Math.random() * (max-min+1)+min);
-}
+  purchaseHour: function(){
+    for(var i = 0; i < 15; i++) {
+      this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
+    }
+  },
+};
 
-console.log(randomNum(california.minCust,california.maxCust));
+var colorado = {
+  minCust: 15,
+  maxCust: 40,
+  salesHourly: [],
+  saleAvg: 10.06,
+
+  randomNum: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+
+  purchaseHour: function(){
+    for(var i = 0; i < 15; i++) {
+      this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
+    }
+  },
+};
+
+
+var Iowa = {
+  minCust: 15,
+  maxCust: 40,
+  salesHourly: [],
+  saleAvg: 10.06,
+
+  randomNum: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+
+  purchaseHour: function(){
+    for(var i = 0; i < 15; i++) {
+      this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
+    }
+  },
+};
+
+
+var Nebraska = {
+  minCust: 15,
+  maxCust: 40,
+  salesHourly: [],
+  saleAvg: 10.06,
+
+  randomNum: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+
+  purchaseHour: function(){
+    for(var i = 0; i < 15; i++) {
+      this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
+    }
+  },
+};
+
+
+var Ohio = {
+  minCust: 15,
+  maxCust: 40,
+  salesHourly: [],
+  saleAvg: 10.06,
+
+  randomNum: function(){
+    return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
+  },
+
+  purchaseHour: function(){
+    for(var i = 0; i < 15; i++) {
+      this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
+    }
+  },
+};
 
