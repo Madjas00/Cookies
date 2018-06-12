@@ -17,11 +17,14 @@ var california = {
   },
 };
 
+california.purchaseHour();
+console.log(california.salesHourly);
+
 var colorado = {
-  minCust: 15,
-  maxCust: 40,
+  minCust: 11,
+  maxCust: 37,
   salesHourly: [],
-  saleAvg: 10.06,
+  saleAvg: 3.4,
 
   randomNum: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
@@ -36,10 +39,10 @@ var colorado = {
 
 
 var Iowa = {
-  minCust: 15,
-  maxCust: 40,
+  minCust: 9,
+  maxCust: 27,
   salesHourly: [],
-  saleAvg: 10.06,
+  saleAvg: 4.1,
 
   randomNum: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
@@ -54,10 +57,10 @@ var Iowa = {
 
 
 var Nebraska = {
-  minCust: 15,
-  maxCust: 40,
+  minCust: 16,
+  maxCust: 38,
   salesHourly: [],
-  saleAvg: 10.06,
+  saleAvg: 6.2,
 
   randomNum: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
@@ -72,10 +75,10 @@ var Nebraska = {
 
 
 var Ohio = {
-  minCust: 15,
-  maxCust: 40,
+  minCust: 8,
+  maxCust: 23,
   salesHourly: [],
-  saleAvg: 10.06,
+  saleAvg: 5.06,
 
   randomNum: function(){
     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
