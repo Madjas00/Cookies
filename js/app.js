@@ -17,8 +17,7 @@ var california = {
   },
 };
 
-california.purchaseHour();
-console.log(california.salesHourly);
+
 
 var colorado = {
   minCust: 11,
@@ -38,7 +37,7 @@ var colorado = {
 };
 
 
-var Iowa = {
+var iowa = {
   minCust: 9,
   maxCust: 27,
   salesHourly: [],
@@ -56,7 +55,7 @@ var Iowa = {
 };
 
 
-var Nebraska = {
+var nebraska = {
   minCust: 16,
   maxCust: 38,
   salesHourly: [],
@@ -74,7 +73,7 @@ var Nebraska = {
 };
 
 
-var Ohio = {
+var ohio = {
   minCust: 8,
   maxCust: 23,
   salesHourly: [],
@@ -91,3 +90,12 @@ var Ohio = {
   },
 };
 
+var hours = ['6am', '7am' , '8am' , '9am' , '10am' , '11am' , '12pm' , '1pm' , '2pm' , '3pm' , '4pm' , '5pm' , '6pm' , '7pm' , '8pm' ];
+california.purchaseHour();
+var caliElem = document.getElementById ('california');
+for (var i = 0; i<15; i++) {
+  var liElem = document.createElement ('li');
+  var fullList = hours[i] + ': ' +california.salesHourly[i] + ' Cookies.';
+  liElem.textContent = fullList;
+  caliElem.appendChild(liElem);
+}
