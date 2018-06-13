@@ -19,103 +19,36 @@ Store.prototype.purchaseHour = function(){
   }
 };
 
+Store.prototype.render = function() {
+  var tbody = document.getElementById('bodytr');
+  var tr = document.createElement ('tr');
+  tbody.appendChild(tr);
+  var td = document.createElement ('td');
+  td.textContent = this.name;
+  tr.appendChild (td);
+  this.purchaseHour();
+  for (var i=0; i<this.salesHourly.length; i++) {
+    td = document.createElement ('td');
+    td.textContent = this.salesHourly[i];
+    tr.appendChild (td);
+  }
+  //totals
+  
+};
+
 var california = new Store (15, 40, 'california', 10.06);
+california.render();
 var colorado = new Store (11, 37, 'colorado', 3.4);
+colorado.render();
 var iowa = new Store (9, 27, 'iowa', 4.1);
+iowa.render();
 var nebraska = new Store (16, 38, 'nebraska', 6.2);
+nebraska.render();
 var ohio = new Store (8, 23, 'ohio', 5.06);
-
-// var california = {
-//   minCust: 15,
-//   maxCust: 40,
-//   salesHourly: [],
-//   saleAvg: 10.06,
-
-//   randomNum: function(){
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   },
-
-//   purchaseHour: function(){
-//     for(var i = 0; i < 15; i++) {
-//       this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
-//     }
-//   },
-// };
+ohio.render();
+var hours = ['6am', '7am' , '8am' , '9am' , '10am' , '11am' , '12pm' , '1pm' , '2pm' , '3pm' , '4pm' , '5pm' , '6pm' , '7pm' , '8pm' ];
 
 
-
-// var colorado = {
-//   minCust: 11,
-//   maxCust: 37,
-//   salesHourly: [],
-//   saleAvg: 3.4,
-
-//   randomNum: function(){
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   },
-
-//   purchaseHour: function(){
-//     for(var i = 0; i < 15; i++) {
-//       this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
-//     }
-//   },
-// };
-
-
-// var iowa = {
-//   minCust: 9,
-//   maxCust: 27,
-//   salesHourly: [],
-//   saleAvg: 4.1,
-
-//   randomNum: function(){
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   },
-
-//   purchaseHour: function(){
-//     for(var i = 0; i < 15; i++) {
-//       this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
-//     }
-//   },
-// };
-
-
-// var nebraska = {
-//   minCust: 16,
-//   maxCust: 38,
-//   salesHourly: [],
-//   saleAvg: 6.2,
-
-//   randomNum: function(){
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   },
-
-//   purchaseHour: function(){
-//     for(var i = 0; i < 15; i++) {
-//       this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
-//     }
-//   },
-// };
-
-
-// var ohio = {
-//   minCust: 8,
-//   maxCust: 23,
-//   salesHourly: [],
-//   saleAvg: 5.06,
-
-//   randomNum: function(){
-//     return Math.floor(Math.random() * (this.maxCust - this.minCust + 1) + this.minCust);
-//   },
-
-//   purchaseHour: function(){
-//     for(var i = 0; i < 15; i++) {
-//       this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
-//     }
-//   },
-// };
-
-// var hours = ['6am', '7am' , '8am' , '9am' , '10am' , '11am' , '12pm' , '1pm' , '2pm' , '3pm' , '4pm' , '5pm' , '6pm' , '7pm' , '8pm' ];
 // california.purchaseHour();
 
 // var caliElem = document.getElementById ('california');
