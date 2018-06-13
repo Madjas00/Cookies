@@ -99,3 +99,13 @@ for (var i = 0; i<15; i++) {
   liElem.textContent = fullList;
   caliElem.appendChild(liElem);
 }
+
+colorado.purchaseHour();
+var colElem = document.getElementById ('colorado');
+for (var c = 0; c<15; c++) {
+  var liCol = document.createElement ('li');
+  var colList = hours[c] + ': ' + colorado.salesHourly[c] + ' Cookies';
+  liCol.textContent = colList;
+  colElem.appendChild(liCol);
+}
+
