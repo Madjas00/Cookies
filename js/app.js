@@ -1,5 +1,14 @@
 'use strict';
 
+
+function store (minCust, maxCust, name, saleAvg) {
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.name = name;
+  this.saleAvg = saleAvg; 
+}
+
+
 var california = {
   minCust: 15,
   maxCust: 40,
