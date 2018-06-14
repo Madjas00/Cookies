@@ -16,6 +16,12 @@ Store.prototype.randomNum = function(){
 Store.prototype.purchaseHour = function(){
   for(var i = 0; i < 15; i++) {
     this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
+
+
+
+
+
+
   }
 };
 
@@ -32,19 +38,29 @@ Store.prototype.render = function() {
     td.textContent = this.salesHourly[i];
     tr.appendChild (td);
   }
-  //totals
-  
+  var total = this.salesHourly.reduce(function(acc, val) { return acc + val; });
+  td.textContent = total;
+  tr.appendChild (td);
 };
 
-var california = new Store (15, 40, 'california', 10.06);
+
+var head = document.getElementById('head');
+var tr = document.createElement ('tr');
+head.appendChild(tr);
+var td = document.createElement ('td');
+td.textContent = 'Total';
+tr.appendChild (td);
+
+
+var california = new Store (15, 40, 'California', 10.06);
 california.render();
-var colorado = new Store (11, 37, 'colorado', 3.4);
+var colorado = new Store (11, 37, 'Colorado', 3.4);
 colorado.render();
-var iowa = new Store (9, 27, 'iowa', 4.1);
+var iowa = new Store (9, 27, 'Iowa', 4.1);
 iowa.render();
-var nebraska = new Store (16, 38, 'nebraska', 6.2);
+var nebraska = new Store (16, 38, 'Nebraska', 6.2);
 nebraska.render();
-var ohio = new Store (8, 23, 'ohio', 5.06);
+var ohio = new Store (8, 23, 'Ohio', 5.06);
 ohio.render();
 var hours = ['6am', '7am' , '8am' , '9am' , '10am' , '11am' , '12pm' , '1pm' , '2pm' , '3pm' , '4pm' , '5pm' , '6pm' , '7pm' , '8pm' ];
 
