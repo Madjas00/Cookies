@@ -40,13 +40,23 @@ Store.prototype.render = function() {
   tr.appendChild (td);
 };
 
+function headelements() {
+  var thead = document.getElementById ('headtr');
+  var tr = document.createElement ('tr');
+  thead.appendChild (tr);
+  var td = document.createElement ('td');
+  tr.appendChild (td);
+  for (var i = 0; i< hours.length; i++) {
+    td = document.createElement ('td');
+    td.textContent = hours[i] ;
+    tr.appendChild (td);
+  }
+  td = document.createElement ('td');
+  td.textContent = 'Total Sales';
+  tr.appendChild (td);
+}
 
-var head = document.getElementById('head');
-var tr = document.createElement ('tr');
-head.appendChild(tr);
-var td = document.createElement ('td');
-td.textContent = 'Total';
-tr.appendChild (td);
+headelements();
 
 
 var california = new Store (15, 40, 'California', 10.06);
