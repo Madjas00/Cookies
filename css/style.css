@@ -14,3 +14,9 @@ td {
 body{
   background-color: #D77A61;
 }
+
+h1 {
+  color: #EFF1F3;
+  font-size: 40px;
+  text-shadow: 2px 0 0 #223843, -2px 0 0 #223843, 0 2px 0 #223843, 0 -2px 0 #223843, 1px 1px #223843, -1px -1px 0 #223843, 1px -1px 0 #223843, -1px 1px 0 #223843;
+}
