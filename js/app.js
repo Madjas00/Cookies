@@ -52,7 +52,7 @@ function headelements() {
     tr.appendChild (td);
   }
   td = document.createElement ('td');
-  td.textContent = 'Total Sales';
+  td.textContent = '-Total Sales-';
   tr.appendChild (td);
 }
 
