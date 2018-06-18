@@ -2,11 +2,13 @@
 var hours = ['6am', '7am' , '8am' , '9am' , '10am' , '11am' , '12pm' , '1pm' , '2pm' , '3pm' , '4pm' , '5pm' , '6pm' , '7pm' , '8pm' ];
 
 function Store (minCust, maxCust, name, saleAvg) {
+  if (arguments.length <4) {console.error ('not enough arguments!')}
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.name = name;
   this.saleAvg = saleAvg;
   this.salesHourly = [];
+ 
 }
 
 Store.prototype.randomNum = function(){
@@ -18,6 +20,8 @@ Store.prototype.purchaseHour = function(){
     this.salesHourly[i] = Math.floor(this.randomNum() * this.saleAvg);
   }
 };
+
+
 
 Store.prototype.render = function() {
   var tbody = document.getElementById('bodytr');
@@ -69,3 +73,22 @@ var nebraska = new Store (16, 38, 'Nebraska', 6.2);
 nebraska.render();
 var ohio = new Store (8, 23, 'Ohio', 5.06);
 ohio.render();
+
+Store.all = [];
+Store.all.push(this);
+
+function submitForm(event) {
+  event.preventDefault();
+  
+
+  
+
+  var name = event.target.name.value;
+  var minCust = event.target.minCust.value;
+  var maxCust = event.target.maxCust.value;
+  var saleAvg = event.target.saleAvg.value;
+  var newStore = new Store (minCust, maxCust, name, saleAvg);
+};
+
+var form = document.querySelector('form');
+form.addEventListener('submit', submitForm);
